@@ -1,0 +1,58 @@
+plugins {
+    id 'java'
+    id 'application'
+}
+
+mainClassName = 'org.htw.prog2.aufgabe2.DICOMDiagnostics'
+
+run {
+    systemProperty "java.library.path", 'lib'
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = 'UTF-8'
+}
+
+group 'org.htw.prog2.aufgabe2'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven {
+        url "https://www.dcm4che.org/maven2/"
+    }
+    maven {
+        url "https://raw.github.com/nroduit/mvn-repo/master/"
+    }
+}
+
+test{
+    workingDir = new File('data/')
+}
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ['src/main']
+        }
+    }
+    test {
+        java {
+            srcDirs = ['src/test']
+        }
+    }
+}
+
+dependencies {
+    testImplementation 'org.junit.jupiter:junit-jupiter-api:5.7.0'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.7.0'
+    implementation 'org.dcm4che:dcm4che-core:5.23.1'
+    implementation 'org.dcm4che:dcm4che-image:5.23.1'
+    implementation 'org.dcm4che:dcm4che-imageio:5.23.1'
+    implementation 'org.dcm4che:dcm4che-imageio-rle:5.23.1'
+    implementation 'org.dcm4che:dcm4che-imageio-opencv:5.23.1'
+}
+
+test {
+    useJUnitPlatform()
+}

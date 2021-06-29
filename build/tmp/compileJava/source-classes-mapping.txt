@@ -1,0 +1,31 @@
+org/htw/prog2/aufgabe2/DICOMDiagnostics.java
+ org.htw.prog2.aufgabe2.DICOMDiagnostics
+org/htw/prog2/aufgabe2/gui/SeriesThumbnail.java
+ org.htw.prog2.aufgabe2.gui.SeriesThumbnail
+org/htw/prog2/aufgabe2/DICOMImage.java
+ org.htw.prog2.aufgabe2.DICOMImage
+org/htw/prog2/aufgabe2/gui/ImageThumbnail.java
+ org.htw.prog2.aufgabe2.gui.ImageThumbnail
+org/htw/prog2/aufgabe2/DICOMFrameMark.java
+ org.htw.prog2.aufgabe2.DICOMFrameMark
+org/htw/prog2/aufgabe2/gui/FrameThumbnail.java
+ org.htw.prog2.aufgabe2.gui.FrameThumbnail
+org/htw/prog2/aufgabe2/gui/ImageDetailPanel.java
+ org.htw.prog2.aufgabe2.gui.ImageDetailPanel
+ org.htw.prog2.aufgabe2.gui.ImageDetailPanel$1
+ org.htw.prog2.aufgabe2.gui.ImageDetailPanel$2
+ org.htw.prog2.aufgabe2.gui.ImageDetailPanel$3
+org/htw/prog2/aufgabe2/DICOMFrame.java
+ org.htw.prog2.aufgabe2.DICOMFrame
+org/htw/prog2/aufgabe2/gui/ImageListPanel.java
+ org.htw.prog2.aufgabe2.gui.ImageListPanel
+ org.htw.prog2.aufgabe2.gui.ImageListPanel$1
+ org.htw.prog2.aufgabe2.gui.ImageListPanel$2
+ org.htw.prog2.aufgabe2.gui.ImageListPanel$3
+ org.htw.prog2.aufgabe2.gui.ImageListPanel$4
+org/htw/prog2/aufgabe2/gui/MainFrame.java
+ org.htw.prog2.aufgabe2.gui.MainFrame
+ org.htw.prog2.aufgabe2.gui.MainFrame$1
+ org.htw.prog2.aufgabe2.gui.MainFrame$2
+ org.htw.prog2.aufgabe2.gui.MainFrame$3
+ org.htw.prog2.aufgabe2.gui.MainFrame$4
