@@ -17,19 +17,13 @@ public class ImageDetailPanel extends JPanel {
         addMouseWheelListener(new MouseWheelListener() {
             @Override
             public void mouseWheelMoved(MouseWheelEvent mouseWheelEvent) {
-                if(mouseWheelEvent.getWheelRotation() < 0) {
+                if (mouseWheelEvent.getWheelRotation() < 0) {
                     mainFrame.setPreviousDetailFrame();
-                }
-                else {
+                } else {
                     mainFrame.setNextDetailFrame();
                 }
             }
         });
-
-    }
-
-    public ImageDetailPanel getThis() {
-        return this;
     }
 
     public void paintComponent(Graphics g) {
