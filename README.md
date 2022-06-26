@@ -2,11 +2,11 @@
 
 In dieser Woche stellen Sie das DICOM-Tool fertig und lernen dabei einige weitere GUI-Komponenten kennen: Das Popup-Menu, welches häufig als Context-Menu bei Rechtsklick eingesetzt wird (```JPopupMenu```) sowie eine Komponente zum Anzeigen großer Inhalte mit Scrollbalken (```JScrollPane```). Auch hier empfiehlt es sich, zunächst die Aufgabenstellung bis zum Ende zu lesen (insbesondere den letzten Teil zur Kommunikation der Komponenten untereinander), bevor Sie mit der Implementation beginnen.
 
-Diese beiden Komponenten setzen Sie ein, um das Hinzufügen und Entfernen von Markierungen auf Bildern zu ermöglichen.
+Die folgenden beiden Komponenten setzen Sie ein, um das Hinzufügen und Entfernen von Markierungen auf Bildern zu ermöglichen.
 
 ## DICOMFrameMark
 
-Implementieren Sie dafür zunächst eine Klasse ```DICOMFrameMark```, die eine Markierung darstellt. Diese soll die Attribute ```x```, ```y``` und ```size``` (die Größe der Markierung in Pixeln) mit den entsprechenden gettern besitzen. In späteren Versionen könnten weitere Informationen wie ein Notiztext oder die Farbe der Markierung hinzukommen. 
+Implementieren Sie dafür zunächst eine Klasse ```DICOMFrameMark```, die eine Markierung darstellt. Diese soll die Attribute ```x```, ```y``` und ```size``` (die Größe der Markierung in Pixeln) mit den entsprechenden Gettern besitzen. In späteren Versionen könnten weitere Informationen wie ein Notiztext oder die Farbe der Markierung hinzukommen. 
 
 Zudem sollte das ```DICOMFrameMark``` eine Methode ```public boolean isInMark(int x, int y)``` besitzen, die überprüft, ob die übergebenen Koordinaten sich innerhalb der Markierung (also innerhalb der eigenen x- und y-Koordinate +- size) befinden. 
 
@@ -27,7 +27,7 @@ Erweitern Sie dann den ```MouseListener``` so, dass er bei einem Rechtsklick - f
 
 Verwenden Sie dafür ein ```JPopupMenu```. Dieses funktioniert exakt genau so, wie ein ```JMenu```: Sie erstellen es und fügen ihm ```JMenuItem``` mit entsprechenden ```ActionListener```n hinzu. Allerdings fügen Sie es dann nicht einem ```JFrame``` über ```setJMenu``` hinzu, sondern zeigen bei Bedarf es über seite Methode ```show(Component c, int x, int y)``` an. Die als erstes Argument übergebene ```Component c``` ist die GUI-Komponente, zu der die übergebenen x- und y-Koordinaten relativ sind. Überlegen Sie, wie Sie dafür aus dem ```ActionListener``` heraus an das ```ImageDetailPanel``` herankommen - es gibt mehrere Möglichkeiten, eine häufig verwendete Herangehensweise ist eine neue Methode ```getThis()``` zu implementieren, die das Objekt selber (also ```this```) zurückgibt.  
 
-Denken Sie dabei daran, dass das für eine sofortige Aktualisierung der Darstellung ```repaint()``` notwendig sein könnte.
+Denken Sie dabei daran, dass für eine sofortige Aktualisierung der Darstellung ```repaint()``` notwendig sein könnte.
 
 ## ImageListPanel
 
