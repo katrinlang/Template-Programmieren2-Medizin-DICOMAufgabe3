@@ -51,7 +51,7 @@ An dieser Stelle der Refaktorisierung sollte sich das Programm wieder genau so v
 
 Um ein einzelnes (markiertes) ```DICOMFrame``` im ```ImageListPanel``` anzuzeigen, implementieren Sie nun die Klasse ```FrameThumbnail```, die ebenfalls von ```ImageThumbnail``` ableitet. Auch hier benötigen Sie nicht viel mehr: Im Constructor (der die gleichen Argumente bekommt, wie der von ```ImageThumbnail```) muss nur der super-Constructor aufgerufen und danach das übergebene ```DICOMFrame``` gespeichert werden. Implementieren Sie zudem eine getter-Methode ```public DICOMFrame getFrame()```, die das übergebene Frame zurückgibt. Abschließend müssen Sie noch ```getDescription()``` überschreiben - geben Sie hier einfach den String "Markiert" zurück.
 
-### ImageThumbinal-Erweiterungen
+### ImageThumbnail-Erweiterungen
 
 Nun müssen diese Elemente nur noch miteinander verknüpft werden.
 
